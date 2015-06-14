@@ -11,12 +11,13 @@
     "mathjs": "^1.0.0"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-simple-mocha": "^0.4.0",
     "chai": "^1.9.1",
-    "matchdep": "^0.3.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-jshint": "^0.10.0"
+    "grunt-jsdoc": "^0.6.7",
+    "grunt-simple-mocha": "^0.4.0",
+    "matchdep": "^0.3.0"
   },
   "scripts": {
     "test": "grunt"

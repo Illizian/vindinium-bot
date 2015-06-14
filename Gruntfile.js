@@ -20,13 +20,22 @@ module.exports = function(grunt) {
 			all: { src: ['tests/*.js'] }
 		},
 
+		jsdoc : {
+			dist : {
+				src: ['lib/*.js'],
+				options: {
+					destination: 'docs'
+				}
+			}
+		},
+
 		watch: {
 			grunt: {
 				files: ['Gruntfile.js']
 			},
 			lib: {
 				files: ['lib/*.js'],
-				tasks: ['jshint', 'test']
+				tasks: ['jshint', 'test', 'docs']
 			},
 			directives: {
 				files: ['directives/*.yaml'],
@@ -42,6 +51,7 @@ module.exports = function(grunt) {
 
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-	grunt.registerTask('default', ['jshint', 'test', 'watch']);
+	grunt.registerTask('default', ['jshint', 'test', 'docs', 'watch']);
 	grunt.registerTask('test', 	  ['simplemocha']);
+	grunt.registerTask('docs',	  ['jsdoc']);
 };
