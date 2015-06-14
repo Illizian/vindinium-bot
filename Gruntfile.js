@@ -9,15 +9,11 @@ module.exports = function(grunt) {
 			}
 		},
 
-		simplemocha: {
+		mochacov: {
 			options: {
-				globals: ['expect'],
-				timeout: 3000,
-				ignoreLeaks: false,
-				ui: 'bdd',
-				reporter: 'spec'
+				reporter: 'mocha-spec-cov'
 			},
-			all: { src: ['tests/*.js'] }
+			all: ['tests/*.js']
 		},
 
 		jsdoc : {
@@ -52,6 +48,6 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	grunt.registerTask('default', ['jshint', 'test', 'docs', 'watch']);
-	grunt.registerTask('test', 	  ['simplemocha']);
+	grunt.registerTask('test', 	  ['mochacov']);
 	grunt.registerTask('docs',	  ['jsdoc']);
 };

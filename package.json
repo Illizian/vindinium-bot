@@ -16,11 +16,18 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jsdoc": "^0.6.7",
-    "grunt-simple-mocha": "^0.4.0",
-    "matchdep": "^0.3.0"
+    "grunt-mocha-cov": "^0.4.0",
+    "matchdep": "^0.3.0",
+    "mocha-spec-cov": "0.0.3"
   },
   "scripts": {
     "test": "grunt"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
+    }
   },
   "author": "",
   "license": "ISC"
