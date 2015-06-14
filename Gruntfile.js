@@ -47,7 +47,24 @@ module.exports = function(grunt) {
 
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-	grunt.registerTask('default', ['jshint', 'test', 'docs', 'watch']);
-	grunt.registerTask('test', 	  ['mochacov']);
+	// Overide options if build
+	if(process.argv[2] === 'build') {
+		grunt.config.merge({
+			mochacov: {
+				options: {
+					reporter: 'html-cov',
+					output: 'docs/coverage.html'
+				},
+				all: ['tests/*.js']
+			},
+		});
+	}
+
+	// Low Level Tasks
+	grunt.registerTask('test', 	  ['jshint', 'mochacov']);
 	grunt.registerTask('docs',	  ['jsdoc']);
+
+	// High Level Tasks
+	grunt.registerTask('default', ['test', 'watch']);
+	grunt.registerTask('build',   ['test', 'docs']);
 };
