@@ -1,4 +1,6 @@
 var expect = require('chai').expect;
+// require('mocha-sinon');
+var sinon = require('sinon');
 
 var instruments = require('./instruments').maps;
 var ai = require('../lib');
@@ -34,6 +36,41 @@ describe("Board Class", function() {
 			expect(map_0.findAt([1, undefined])).to.equal(null);
 			expect(map_0.findAt([])).to.equal(null);
 		});
+
+	});
+
+	describe("printMap()", function() {
+		var map_0 = new ai.Board(instruments[0]);
+
+		it("Should print the map to STDOUT in a human readable format", sinon.test(function() {
+			this.stub(console, 'log');
+			map_0.printMap();
+			expect(console.log.callCount).to.equal(1);
+			expect(console.log.calledWith(
+				'####    ####    ############    ####    ####\n'+
+				'####$-    ##@1  ############    ##    $-####\n'+
+				'######  ##      $-########$4@4    ##  ######\n'+
+				'####$-  ####  []####    ####[]  ####  $-####\n'+
+				'####$-  ##                        ##  $-####\n'+
+				'######  ##  ##      ####      ##  ##  ######\n'+
+				'####      $-      ##    ##      $-      ####\n'+
+				'##$-                                    $-##\n'+
+				'##            $-############$-            ##\n'+
+				'    $-##    ####################    ##$-    \n'+
+				'    ##        ################        ##    \n'+
+				'    ##        ################        ##    \n'+
+				'    $-##    ####################    ##$-    \n'+
+				'##            $-############$-            ##\n'+
+				'##$-                                    $-##\n'+
+				'####      $-      ##    ##      $-      ####\n'+
+				'######  ##  ##      ####      ##  ##  ######\n'+
+				'####$-  ##                        ##  $-####\n'+
+				'####$-  ####  []####    ####[]  ####  $-####\n'+
+				'######  ##  @2  $-########$-  @3  ##  ######\n'+
+				'####$-    ##    ############    ##    $-####\n'+
+				'####    ####    ############    ####    ####'
+			));
+		}));
 
 	});
 
