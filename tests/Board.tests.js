@@ -1,5 +1,4 @@
 var expect = require('chai').expect;
-// require('mocha-sinon');
 var sinon = require('sinon');
 
 var instruments = require('./instruments').maps;
