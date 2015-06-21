@@ -21,7 +21,7 @@ Then pass the game state objects to the provided Classes. E.g. when using [steph
 
 ```javascript
 function bot(state, callback) {
-    var intel = new helper.Intel(state);
+    var intel = new helper.Intel(state.game, state.hero);
     var board = new helper.Board(state.game.board);
 
     board.printMap();
