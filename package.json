@@ -22,7 +22,7 @@
     "mocha-spec-cov": "0.0.3"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "./node_modules/mocha/bin/mocha tests/"
   },
   "config": {
     "blanket": {
