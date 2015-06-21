@@ -17,11 +17,12 @@
     "grunt-contrib-watch": "0.6.x",
     "grunt-jsdoc": "0.6.x",
     "grunt-mocha-cov": "0.4.x",
+    "grunt-notify": "^0.4.1",
     "grunt-simple-mocha": "0.4.x",
     "matchdep": "0.3.x",
     "mocha": "2.2.x",
-    "sinon": "1.15.x",
-    "mocha-spec-cov": "0.0.x"
+    "mocha-spec-cov": "0.0.x",
+    "sinon": "1.15.x"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha tests/"

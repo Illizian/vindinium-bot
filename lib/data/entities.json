@@ -1,0 +1,23 @@
+{
+	"path": {
+		"pattern": "\\s{2}"
+	},
+	"wood": {
+		"pattern": "[#]{2}"
+	},
+	"hero": {
+		"pattern": "[@]\\d"
+	},
+	"tavern": {
+		"pattern": "\\[\\]"
+	},
+	"mine": {
+		"pattern": "\\$(\\d|-)"
+	},
+	"mine_claimed": {
+		"pattern": "\\$\\d"
+	},
+ 	"mine_unclaimed": {
+ 		"pattern": "\\$\\-"
+ 	}
+}
