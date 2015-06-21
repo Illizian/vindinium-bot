@@ -1,6 +1,6 @@
 {
   "name": "vindinium-bot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A javascript helper library for building Vindinium bots",
   "main": "lib/index.js",
   "directories": {
