@@ -32,10 +32,6 @@ module.exports = function(grunt) {
 			},
 			lib: {
 				files: ['lib/*.js'],
-				tasks: ['jshint', 'test', 'docs']
-			},
-			directives: {
-				files: ['directives/*.yaml'],
 				tasks: ['jshint', 'test']
 			},
 			tests: {
