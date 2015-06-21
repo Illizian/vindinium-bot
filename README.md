@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/vindinium-helper.svg)](https://www.npmjs.com/package/vindinium-helper) [![Build Status](https://travis-ci.org/Illizian/vindinium-helper.svg)](https://travis-ci.org/Illizian/vindinium-helper)
+[![npm version](https://badge.fury.io/js/vindinium-helper.svg)](https://www.npmjs.com/package/vindinium-helper) [![Build Status](https://travis-ci.org/Illizian/vindinium-helper.svg)](https://travis-ci.org/Illizian/vindinium-helper) [![Codacy Badge](https://www.codacy.com/project/badge/f752bef14d5a42cbbb4d96facc37d9da)](https://www.codacy.com/app/alex_6/vindinium-helper)
 
 # Vindinium Helper
 
