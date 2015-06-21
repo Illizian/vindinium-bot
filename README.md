@@ -1,24 +1,33 @@
-# Vindinium Bot
+[![Build Status](https://travis-ci.org/Illizian/vindinium-helper.svg)](https://travis-ci.org/Illizian/vindinium-helper)
+
+# Vindinium Helper
 
 A javascript helper library for building Vindinium bots
 
-## Intel Parser
+## Installation
 
-Should be able to extrapolate intel from a provided game state
+```
+$ npm install vindinium-helper --save
+```
 
-## Board
+## Usage
 
-Should be able to parse a board
+Load the library
+```javascript
+var helper = require('vindinium-helper');
+```
 
-## AI Logic
+Then pass the game state objects to the provided Classes. E.g. when using [stephank/vindinium-client](https://github.com/stephank/vindinium-client)
 
-### Routines
-Basic One Function routines (e.g. Moving)
+```javascript
+function bot(state, callback) {
+    var intel = new helper.Intel(state);
+    var board = new helper.Board(state.game.board);
 
-### Directives
-- More Complex sets of routines (e.g. GoTo X,Y or Restore Health)
-- Use 'Genetic Programming' to train and analyse directives
+    board.printMap();
+};
+```
 
-### Resources
-http://www.reddit.com/r/gamedev/comments/2cp54p/ai_for_complete_beginners_behaviour_trees/
+## API
 
+Please see ```docs/```
