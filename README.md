@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Illizian/vindinium-helper.svg)](https://travis-ci.org/Illizian/vindinium-helper)
+[![npm version](https://badge.fury.io/js/vindinium-helper.svg)](https://www.npmjs.com/package/vindinium-helper) [![Build Status](https://travis-ci.org/Illizian/vindinium-helper.svg)](https://travis-ci.org/Illizian/vindinium-helper)
 
 # Vindinium Helper
 
