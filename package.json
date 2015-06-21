@@ -1,6 +1,6 @@
 {
   "name": "vindinium-bot",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "lib/index.js",
   "directories": {
@@ -19,6 +19,8 @@
     "grunt-mocha-cov": "^0.4.0",
     "grunt-simple-mocha": "^0.4.0",
     "matchdep": "^0.3.0",
+    "mocha": "2.2.5",
+    "sinon": "1.15",
     "mocha-spec-cov": "0.0.3"
   },
   "scripts": {
