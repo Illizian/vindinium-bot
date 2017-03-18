@@ -2,6 +2,8 @@
 
 # Vindinium Helper
 
+[illizian.github.io/vindinium-helper/](https://illizian.github.io/vindinium-helper/)
+
 A javascript helper library for building Vindinium bots
 
 ## Installation
